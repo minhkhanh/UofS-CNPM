@@ -1,0 +1,9 @@
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\Sources\QLDL\BUS\obj\Debug\ResolveAssemblyReference.cache
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\Sources\QLDL\BUS\bin\Debug\BUS.dll
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\Sources\QLDL\BUS\bin\Debug\BUS.pdb
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\Sources\QLDL\BUS\bin\Debug\DAO.dll
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\Sources\QLDL\BUS\bin\Debug\DTO.dll
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\Sources\QLDL\BUS\bin\Debug\DTO.pdb
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\Sources\QLDL\BUS\bin\Debug\DAO.pdb
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\Sources\QLDL\BUS\obj\Debug\BUS.dll
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\Sources\QLDL\BUS\obj\Debug\BUS.pdb
