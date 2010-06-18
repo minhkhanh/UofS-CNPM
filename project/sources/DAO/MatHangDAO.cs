@@ -20,7 +20,7 @@ namespace DAO
             try
             {
                 ketNoi = MoKetNoi();
-                string chuoiLenh = "SELECT MaMatHang, TenMatHang, SoLuongTon, Deleted FROM MATHANG";
+                string chuoiLenh = "SELECT MaMatHang, TenMatHang, Deleted FROM MATHANG";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
                 OleDbDataReader boDoc = lenh.ExecuteReader();
                 while (boDoc.Read())
@@ -29,9 +29,7 @@ namespace DAO
                     phieuXuat.MaMatHang = boDoc.GetInt32(0);
                     if (!boDoc.IsDBNull(1))
                         phieuXuat.TenMatHang = boDoc.GetString(1);
-                    if (!boDoc.IsDBNull(2))
-                        phieuXuat.SoLuongTon = boDoc.GetInt32(2);
-                    if ((!boDoc.IsDBNull(3)) && (boDoc.GetBoolean(3)))
+                    if ((!boDoc.IsDBNull(2)) && (boDoc.GetBoolean(2)))
                         continue;
                     dsMatHang.Add(phieuXuat);
                 }
@@ -58,7 +56,7 @@ namespace DAO
             try
             {
                 ketNoi = MoKetNoi();
-                string chuoiLenh = "SELECT MaMatHang, TenMatHang, SoLuongTon, Deleted FROM MATHANG";
+                string chuoiLenh = "SELECT MaMatHang, TenMatHang, Deleted FROM MATHANG";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
                 OleDbDataReader boDoc = lenh.ExecuteReader();
                 while (boDoc.Read())
@@ -67,10 +65,8 @@ namespace DAO
                     phieuXuat.MaMatHang = boDoc.GetInt32(0);
                     if (!boDoc.IsDBNull(1))
                         phieuXuat.TenMatHang = boDoc.GetString(1);
-                    if (!boDoc.IsDBNull(2))
-                        phieuXuat.SoLuongTon = boDoc.GetInt32(2);
-                    if ((!boDoc.IsDBNull(3)) && (boDoc.GetBoolean(3)))
-                        phieuXuat.Deleted = boDoc.GetBoolean(3);
+                    if ((!boDoc.IsDBNull(2)) && (boDoc.GetBoolean(2)))
+                        phieuXuat.Deleted = boDoc.GetBoolean(2);
                     dsMatHang.Add(phieuXuat);
                 }
             }
@@ -98,8 +94,8 @@ namespace DAO
             {
                 ketNoi = MoKetNoi();
                 //do mã dùng auto number và delete dùng defaut 0 nên ko cần insert
-                string chuoiLenh = "INSERT INTO MATHANG(TenMatHang, SoLuongTon)";
-                chuoiLenh += " VALUES(@TenMatHang, @SoLuongTon)";
+                string chuoiLenh = "INSERT INTO MATHANG(TenMatHang)";
+                chuoiLenh += " VALUES(@TenMatHang)";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
 
                 // Các tham số
@@ -108,10 +104,6 @@ namespace DAO
 
                 thamSo = new OleDbParameter("@TenMatHang", OleDbType.VarChar);
                 thamSo.Value = matHang.TenMatHang;
-                lenh.Parameters.Add(thamSo);
-
-                thamSo = new OleDbParameter("@SoLuongTon", OleDbType.Integer);
-                thamSo.Value = matHang.SoLuongTon;
                 lenh.Parameters.Add(thamSo);
 
                 lenh.ExecuteNonQuery();
@@ -140,16 +132,12 @@ namespace DAO
             try
             {
                 ketNoi = MoKetNoi();
-                string chuoiLenh = "UPDATE MATHANG SET  TenMatHang=@TenMatHang, SoLuongTon=@SoLuongTon, Deleted=@Deleted WHERE MaMatHang=@MaMatHang";
+                string chuoiLenh = "UPDATE MATHANG SET  TenMatHang=@TenMatHang, Deleted=@Deleted WHERE MaMatHang=@MaMatHang";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
                 OleDbParameter thamSo;
 
                 thamSo = new OleDbParameter("@TenMatHang", OleDbType.VarChar);
                 thamSo.Value = matHang.TenMatHang;
-                lenh.Parameters.Add(thamSo);
-
-                thamSo = new OleDbParameter("@SoLuongTon", OleDbType.Integer);
-                thamSo.Value = matHang.SoLuongTon;
                 lenh.Parameters.Add(thamSo);
 
                 thamSo = new OleDbParameter("@Delete", OleDbType.Boolean);

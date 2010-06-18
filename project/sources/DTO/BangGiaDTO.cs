@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DTO
 {
-    public class MatHangDTO
+    class BangGiaDTO
     {
         /// <summary>
         /// Mã của mặt hàng, dùng quản lý trong csdl
@@ -16,13 +16,22 @@ namespace DTO
             set { maMatHang = value; }
         }
         /// <summary>
-        /// Tên của mặt hàng
+        /// Mã của đơn vị tính, dùng quản lý trong csdl
         /// </summary>
-        private string tenMatHang = "";
-        public string TenMatHang
+        private long maDonViTinh = -1;
+        public long MaDonViTinh
         {
-            get { return tenMatHang; }
-            set { tenMatHang = value; }
+            get { return maDonViTinh; }
+            set { maDonViTinh = value; }
+        }
+        /// <summary>
+        /// Đơn giá của mặt hàng
+        /// </summary>
+        private long donGia = -1;
+        public long DonGia
+        {
+            get { return donGia; }
+            set { donGia = value; }
         }
         /// <summary>
         /// Đánh dấu có bị xóa hay không

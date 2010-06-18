@@ -69,5 +69,14 @@ namespace DTO
             get { return thanhTien; }
             set { thanhTien = value; }
         }
+        /// <summary>
+        /// Đánh dấu có bị xóa hay không
+        /// </summary>
+        private bool deleted = false;
+        public bool Deleted
+        {
+            get { return deleted; }
+            set { deleted = value; }
+        }
     }
 }
