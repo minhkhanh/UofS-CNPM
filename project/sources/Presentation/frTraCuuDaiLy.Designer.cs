@@ -36,6 +36,15 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxDaiLy = new System.Windows.Forms.TextBox();
+            this.textBoxLoai = new System.Windows.Forms.TextBox();
+            this.textBoxQuan = new System.Windows.Forms.TextBox();
+            this.textBoxTienNo = new System.Windows.Forms.TextBox();
+            this.buttonTraCuu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gridDaiLy)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,12 +70,12 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.gridDaiLy.Location = new System.Drawing.Point(3, 48);
+            this.gridDaiLy.Location = new System.Drawing.Point(3, 218);
             this.gridDaiLy.MultiSelect = false;
             this.gridDaiLy.Name = "gridDaiLy";
             this.gridDaiLy.RowHeadersVisible = false;
             this.gridDaiLy.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridDaiLy.Size = new System.Drawing.Size(605, 333);
+            this.gridDaiLy.Size = new System.Drawing.Size(605, 163);
             this.gridDaiLy.TabIndex = 1;
             // 
             // Column1
@@ -105,15 +114,98 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(41, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(72, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Tên Đại lý";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(41, 112);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 17);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Loại Đại Lý";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(310, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 17);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Quận";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(297, 106);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 17);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Tiền nợ";
+            // 
+            // textBoxDaiLy
+            // 
+            this.textBoxDaiLy.Location = new System.Drawing.Point(127, 64);
+            this.textBoxDaiLy.Name = "textBoxDaiLy";
+            this.textBoxDaiLy.Size = new System.Drawing.Size(126, 23);
+            this.textBoxDaiLy.TabIndex = 10;
+            // 
+            // textBoxLoai
+            // 
+            this.textBoxLoai.Location = new System.Drawing.Point(127, 109);
+            this.textBoxLoai.Name = "textBoxLoai";
+            this.textBoxLoai.Size = new System.Drawing.Size(126, 23);
+            this.textBoxLoai.TabIndex = 11;
+            // 
+            // textBoxQuan
+            // 
+            this.textBoxQuan.Location = new System.Drawing.Point(392, 64);
+            this.textBoxQuan.Name = "textBoxQuan";
+            this.textBoxQuan.Size = new System.Drawing.Size(126, 23);
+            this.textBoxQuan.TabIndex = 12;
+            // 
+            // textBoxTienNo
+            // 
+            this.textBoxTienNo.Location = new System.Drawing.Point(392, 106);
+            this.textBoxTienNo.Name = "textBoxTienNo";
+            this.textBoxTienNo.Size = new System.Drawing.Size(126, 23);
+            this.textBoxTienNo.TabIndex = 13;
+            // 
+            // buttonTraCuu
+            // 
+            this.buttonTraCuu.Location = new System.Drawing.Point(394, 160);
+            this.buttonTraCuu.Name = "buttonTraCuu";
+            this.buttonTraCuu.Size = new System.Drawing.Size(152, 29);
+            this.buttonTraCuu.TabIndex = 14;
+            this.buttonTraCuu.Text = "Tra cứu";
+            this.buttonTraCuu.UseVisualStyleBackColor = true;
+            this.buttonTraCuu.Click += new System.EventHandler(this.buttonTraCuu_Click);
+            // 
             // frTraCuuDaiLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 393);
+            this.Controls.Add(this.buttonTraCuu);
+            this.Controls.Add(this.textBoxTienNo);
+            this.Controls.Add(this.textBoxQuan);
+            this.Controls.Add(this.textBoxLoai);
+            this.Controls.Add(this.textBoxDaiLy);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.gridDaiLy);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frTraCuuDaiLy";
             this.Text = "Tra cứu đại lý";
             this.Load += new System.EventHandler(this.frTraCuuDaiLy_Load);
@@ -133,5 +225,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxDaiLy;
+        private System.Windows.Forms.TextBox textBoxLoai;
+        private System.Windows.Forms.TextBox textBoxQuan;
+        private System.Windows.Forms.TextBox textBoxTienNo;
+        private System.Windows.Forms.Button buttonTraCuu;
     }
 }

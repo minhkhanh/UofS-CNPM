@@ -38,5 +38,11 @@ namespace Presentation
             frQuanLyQuan frm = new frQuanLyQuan();
             frm.ShowDialog();
         }
+
+        private void buttonLapPhieuThuTien_Click(object sender, EventArgs e)
+        {
+            frLapPhieuThuTien frm = new frLapPhieuThuTien();
+            frm.ShowDialog();
+        }
     }
 }

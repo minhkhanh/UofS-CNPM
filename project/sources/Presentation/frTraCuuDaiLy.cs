@@ -30,5 +30,31 @@ namespace Presentation
         {
             LoadGrid();
         }
+
+        private void buttonTraCuu_Click(object sender, EventArgs e)
+        {
+            LoadGridTraCuu();
+        }
+        private void LoadGridTraCuu()
+        {
+            textBoxDaiLy.Text = textBoxDaiLy.Text.Trim();
+            textBoxLoai.Text = textBoxLoai.Text.Trim();
+            textBoxQuan.Text = textBoxQuan.Text.Trim();
+            textBoxTienNo.Text = textBoxTienNo.Text.Trim();
+
+            string DaiLy = textBoxDaiLy.Text;
+            string Loai = textBoxLoai.Text;
+            string Quan = textBoxQuan.Text;
+            string TienNo = textBoxTienNo.Text;
+
+            List<TraCuuDaiLyDTO> dsTraCuuDaiLy = TraCuuDaiLyBUS.LayDanhSachTraCuu(DaiLy, Loai, Quan, TienNo);
+            gridDaiLy.Rows.Clear();
+            for (int i = 0; i < dsTraCuuDaiLy.Count; ++i)
+            {
+                gridDaiLy.Rows.Add(i + 1,dsTraCuuDaiLy[i].MaDaiLy, dsTraCuuDaiLy[i].TenDaiLy, dsTraCuuDaiLy[i].TenLoaiDaiLy,dsTraCuuDaiLy[i].TenQuan, dsTraCuuDaiLy[i].TienNo);
+                gridDaiLy.Rows[gridDaiLy.RowCount - 1].Tag = dsTraCuuDaiLy[i];
+            }
+        }
+
     }
 }
