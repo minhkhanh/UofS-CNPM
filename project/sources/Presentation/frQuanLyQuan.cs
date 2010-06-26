@@ -31,6 +31,7 @@ namespace Presentation
         private void frQuanLyQuan_Load(object sender, EventArgs e)
         {
             LoadGrid();
+            gridQuan_SelectionChanged(sender, e);
         }
 
         private void gridQuan_SelectionChanged(object sender, EventArgs e)
@@ -87,5 +88,6 @@ namespace Presentation
                 }
             }
         }
+
     }
 }

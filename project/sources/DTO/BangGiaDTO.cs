@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DTO
 {
-    class BangGiaDTO
+    public class BangGiaDTO
     {
         /// <summary>
         /// Mã của mặt hàng, dùng quản lý trong csdl

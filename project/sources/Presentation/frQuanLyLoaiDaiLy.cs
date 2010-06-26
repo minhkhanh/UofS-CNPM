@@ -31,6 +31,7 @@ namespace Presentation
         private void frQuanLyLoaiDaiLy_Load(object sender, EventArgs e)
         {
             LoadGrid();
+            gridLoaiDaiLy_SelectionChanged(sender, e);
         }
 
         private void gridLoaiDaiLy_SelectionChanged(object sender, EventArgs e)

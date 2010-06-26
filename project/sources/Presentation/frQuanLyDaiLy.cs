@@ -55,6 +55,7 @@ namespace Presentation
         {
             LoadGrid();
             LoadCombo();
+            gridDaiLy_SelectionChanged(sender, e);
         }
 
         private void cmdCapNhat_Click(object sender, EventArgs e)

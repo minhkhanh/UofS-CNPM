@@ -33,6 +33,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.buttonLapPhieuThuTien = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -85,11 +86,22 @@
             this.buttonLapPhieuThuTien.UseVisualStyleBackColor = true;
             this.buttonLapPhieuThuTien.Click += new System.EventHandler(this.buttonLapPhieuThuTien_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(200, 249);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(130, 61);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Quản lý mặt hàng";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // frDemoBaiTap2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 349);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.buttonLapPhieuThuTien);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -110,5 +122,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button buttonLapPhieuThuTien;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -36,10 +36,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gridQuan = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.colMaLoaiDaiLy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenLoaiDaiLy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNoToiDa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numSoDaiLyToiDa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridQuan)).BeginInit();
             this.SuspendLayout();
@@ -150,16 +150,6 @@
             this.gridQuan.TabIndex = 13;
             this.gridQuan.SelectionChanged += new System.EventHandler(this.gridQuan_SelectionChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(146, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 20);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "QUẢN LÝ QUẬN";
-            // 
             // colMaLoaiDaiLy
             // 
             this.colMaLoaiDaiLy.HeaderText = "Mã quận";
@@ -180,6 +170,16 @@
             this.colNoToiDa.ReadOnly = true;
             this.colNoToiDa.Width = 150;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(146, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 20);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "QUẢN LÝ QUẬN";
+            // 
             // frQuanLyQuan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,7 +195,7 @@
             this.Controls.Add(this.gridQuan);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frQuanLyQuan";
             this.Text = "Quản lý quận";
             this.Load += new System.EventHandler(this.frQuanLyQuan_Load);

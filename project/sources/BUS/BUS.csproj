@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{244FCA53-370C-493F-A489-5AE32228F7AE}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -44,7 +44,6 @@
     <Compile Include="PhieuXuatBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanBUS.cs" />
-    <Compile Include="TraCuuDaiLyBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAO\DAO.csproj">

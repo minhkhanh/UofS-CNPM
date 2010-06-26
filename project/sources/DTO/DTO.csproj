@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{25842DBD-2412-46E9-A6DF-79EACD517690}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -46,7 +46,6 @@
     <Compile Include="PhieuXuatDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanDTO.cs" />
-    <Compile Include="TraCuuDaiLyDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
