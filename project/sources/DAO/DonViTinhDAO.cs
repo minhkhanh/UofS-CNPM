@@ -83,6 +83,47 @@ namespace DAO
         }
 
         /// <summary>
+        /// Lấy đơn vị tính theo mã
+        /// </summary>
+        /// <returns>đơn vị tính</returns>
+        public static DonViTinhDTO LayDonViTinhTheoMa(DonViTinhDTO donViTinh)
+        {
+            OleDbConnection ketNoi = null;
+            try
+            {
+                ketNoi = MoKetNoi();
+                string chuoiLenh = "SELECT MaDonViTinh, TenDonViTinh, Deleted FROM DONVITINH WHERE MaDonViTinh=@MaDonViTinh";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+
+                OleDbParameter thamSo;
+                thamSo = new OleDbParameter("@MaDonViTinh", OleDbType.Integer);
+                thamSo.Value = donViTinh.MaDonViTinh;
+                lenh.Parameters.Add(thamSo);
+
+                OleDbDataReader boDoc = lenh.ExecuteReader();
+                while (boDoc.Read())
+                {
+                    donViTinh.MaDonViTinh = boDoc.GetInt32(0);
+                    if (!boDoc.IsDBNull(1))
+                        donViTinh.TenDonViTinh = boDoc.GetString(1);
+                    if (!boDoc.IsDBNull(2))
+                        donViTinh.Deleted = boDoc.GetBoolean(2);
+                    break;
+                }
+            }
+            catch (Exception ex)
+            {
+                donViTinh = new DonViTinhDTO();
+            }
+            finally
+            {
+                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
+                    ketNoi.Close(); // sau khi làm xong phải đóng kết nối
+            }
+            return donViTinh;
+        }
+
+        /// <summary>
         /// Thêm 1 đơn vị tính mới
         /// </summary>
         /// <param name="quan">Thông tin đơn vị tính mới cần thêm</param>

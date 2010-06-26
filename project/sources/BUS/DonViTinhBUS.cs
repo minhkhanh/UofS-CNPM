@@ -29,13 +29,25 @@ namespace BUS
         /// <summary>
         /// Thêm 1 đơn vị tính mới
         /// </summary>
-        /// <param name="quan">Thông tin đơn vị tính mới cần thêm</param>
+        /// <param name="donViTinh">Thông tin đơn vị tính mới cần thêm</param>
         /// <returns>True: Thêm thành công; False: Thêm thất bại</returns>
         public static bool ThemMoi(DonViTinhDTO donViTinh)
         {
             //Kiểm tra các qui định
             return DonViTinhDAO.ThemMoi(donViTinh);
         }
+
+        /// <summary>
+        /// Lấy đơn vị tính theo mã
+        /// </summary>
+        /// <param name="donViTinh">tin đơn vị tính chứa mã</param>
+        /// <returns>đơn vị tính</returns>
+        public static DonViTinhDTO LayDonViTinhTheoMa(DonViTinhDTO donViTinh)
+        {
+            //Kiểm tra các qui định
+            return DonViTinhDAO.LayDonViTinhTheoMa(donViTinh);
+        }
+
         /// <summary>
         /// Cập nhật thông tin một đơn vị tính
         /// </summary>

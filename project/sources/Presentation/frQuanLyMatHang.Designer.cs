@@ -34,9 +34,9 @@
             this.txtTenMatHang = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.gridMatHang = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.maMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenMatHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridMatHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,6 +48,7 @@
             this.cmdDong.TabIndex = 20;
             this.cmdDong.Text = "Đóng";
             this.cmdDong.UseVisualStyleBackColor = true;
+            this.cmdDong.Click += new System.EventHandler(this.cmdDong_Click);
             // 
             // cmdCapNhat
             // 
@@ -57,6 +58,7 @@
             this.cmdCapNhat.TabIndex = 19;
             this.cmdCapNhat.Text = "Cập nhật";
             this.cmdCapNhat.UseVisualStyleBackColor = true;
+            this.cmdCapNhat.Click += new System.EventHandler(this.cmdCapNhat_Click);
             // 
             // cmdThem
             // 
@@ -66,6 +68,7 @@
             this.cmdThem.TabIndex = 18;
             this.cmdThem.Text = "Thêm";
             this.cmdThem.UseVisualStyleBackColor = true;
+            this.cmdThem.Click += new System.EventHandler(this.cmdThem_Click);
             // 
             // txtTenMatHang
             // 
@@ -91,6 +94,7 @@
             // 
             this.gridMatHang.AllowUserToAddRows = false;
             this.gridMatHang.AllowUserToDeleteRows = false;
+            this.gridMatHang.AllowUserToResizeRows = false;
             this.gridMatHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridMatHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maMatHang,
@@ -104,16 +108,6 @@
             this.gridMatHang.TabIndex = 13;
             this.gridMatHang.SelectionChanged += new System.EventHandler(this.gridMatHang_SelectionChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(116, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 20);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "QUẢN LÝ CÁC MẶT HÀNG";
-            // 
             // maMatHang
             // 
             this.maMatHang.HeaderText = "Mã mặt hàng";
@@ -126,6 +120,16 @@
             this.tenMatHang.Name = "tenMatHang";
             this.tenMatHang.ReadOnly = true;
             this.tenMatHang.Width = 230;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(116, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(224, 20);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "QUẢN LÝ CÁC MẶT HÀNG";
             // 
             // frQuanLyMatHang
             // 

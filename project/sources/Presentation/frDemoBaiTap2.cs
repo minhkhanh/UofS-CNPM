@@ -50,5 +50,17 @@ namespace Presentation
             frQuanLyMatHang frm = new frQuanLyMatHang();
             frm.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frQuanLyBangGia frm = new frQuanLyBangGia();
+            frm.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frQuanLyDonViTinh frm = new frQuanLyDonViTinh();
+            frm.ShowDialog();
+        }
     }
 }

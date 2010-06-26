@@ -46,6 +46,48 @@ namespace DAO
             return dsMatHang;
         }
         /// <summary>
+        /// Lấy mặt hàng theo mã mặt hàng
+        /// </summary>
+        /// <returns>Danh sách các mặt hàng</returns>
+        public static MatHangDTO LayMatHangTheoMa(MatHangDTO matHang)
+        {
+            OleDbConnection ketNoi = null;
+            try
+            {
+                ketNoi = MoKetNoi();
+                string chuoiLenh = "SELECT MaMatHang, TenMatHang, Deleted FROM MATHANG WHERE MaMatHang=@MaMatHang";
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+
+                OleDbParameter thamSo;
+                thamSo = new OleDbParameter("@MaMatHang", OleDbType.Integer);
+                thamSo.Value = matHang.MaMatHang;
+                lenh.Parameters.Add(thamSo);
+
+                OleDbDataReader boDoc = lenh.ExecuteReader();
+                while (boDoc.Read())
+                {
+                    matHang.MaMatHang = boDoc.GetInt32(0);
+                    if (!boDoc.IsDBNull(1))
+                        matHang.TenMatHang = boDoc.GetString(1);
+                    if ((!boDoc.IsDBNull(2)) )
+                    {
+                        matHang.Deleted = boDoc.GetBoolean(2);
+                    }
+                    break;
+                }
+            }
+            catch (Exception ex)
+            {
+                matHang = new MatHangDTO();
+            }
+            finally
+            {
+                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
+                    ketNoi.Close(); // sau khi làm xong phải đóng kết nối
+            }
+            return matHang;
+        }
+        /// <summary>
         /// Lấy ds các các mặt hàng kể cả bị xóa
         /// </summary>
         /// <returns>Danh sách các mặt hàng</returns>
@@ -61,13 +103,13 @@ namespace DAO
                 OleDbDataReader boDoc = lenh.ExecuteReader();
                 while (boDoc.Read())
                 {
-                    MatHangDTO phieuXuat = new MatHangDTO();
-                    phieuXuat.MaMatHang = boDoc.GetInt32(0);
+                    MatHangDTO matHang = new MatHangDTO();
+                    matHang.MaMatHang = boDoc.GetInt32(0);
                     if (!boDoc.IsDBNull(1))
-                        phieuXuat.TenMatHang = boDoc.GetString(1);
+                        matHang.TenMatHang = boDoc.GetString(1);
                     if ((!boDoc.IsDBNull(2)) && (boDoc.GetBoolean(2)))
-                        phieuXuat.Deleted = boDoc.GetBoolean(2);
-                    dsMatHang.Add(phieuXuat);
+                        matHang.Deleted = boDoc.GetBoolean(2);
+                    dsMatHang.Add(matHang);
                 }
             }
             catch (Exception ex)

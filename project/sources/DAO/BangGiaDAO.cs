@@ -141,7 +141,7 @@ namespace DAO
             try
             {
                 ketNoi = MoKetNoi();
-                string chuoiLenh = "UPDATE LOAIDAILY SET  DonGia=@DonGia, Deleted=@Deleted WHERE MaMatHang=@MaMatHang AND MaDonViTinh=@MaDonViTinh";
+                string chuoiLenh = "UPDATE BANGGIA SET  DonGia=@DonGia, Deleted=@Deleted WHERE MaMatHang=@MaMatHang AND MaDonViTinh=@MaDonViTinh";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
                 OleDbParameter thamSo;
 

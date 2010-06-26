@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DTO
 {
-    class ChiTietPhieuXuatDTO
+    public class ChiTietPhieuXuatDTO
     {
         /// <summary>
         /// Mã số, con số tự động tăng, dùng quản lý trong CSDL

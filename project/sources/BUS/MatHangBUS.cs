@@ -27,6 +27,15 @@ namespace BUS
             return MatHangDAO.LayToanBoDanhSachMatHang();
         }
         /// <summary>
+        /// Lấy mặt hàng theo mã
+        /// </summary>
+        /// <returns>mặt hàng</returns>
+        public static MatHangDTO LayMatHangTheoMa(MatHangDTO matHang)
+        {
+            //Kiểm tra các qui định
+            return MatHangDAO.LayMatHangTheoMa(matHang);
+        }
+        /// <summary>
         /// Thêm 1 mặt hàng mới
         /// </summary>
         /// <param name="matHang">Thông tin mặt hàng mới cần thêm</param>

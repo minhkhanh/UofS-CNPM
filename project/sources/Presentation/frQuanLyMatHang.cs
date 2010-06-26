@@ -20,6 +20,7 @@ namespace Presentation
         private void frQuanLyMatHang_Load(object sender, EventArgs e)
         {
             LoadGrid();
+            gridMatHang_SelectionChanged(sender, e);
         }
         private void LoadGrid()
         {
@@ -40,6 +41,44 @@ namespace Presentation
                 MatHangDTO loaiMatHangDuocChon = (MatHangDTO)gridMatHang.CurrentRow.Tag;
                 txtTenMatHang.Text = loaiMatHangDuocChon.TenMatHang;          
             }
+        }
+
+        private void cmdDong_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void cmdCapNhat_Click(object sender, EventArgs e)
+        {
+            if (txtTenMatHang.Text == "")
+            {
+                MessageBox.Show("Tên mặt hàng không được rỗng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (gridMatHang.CurrentRow.Tag != null)
+            {
+                try
+                {
+                    MatHangDTO matHangDuocChon = (MatHangDTO)gridMatHang.CurrentRow.Tag;
+                    matHangDuocChon.TenMatHang = txtTenMatHang.Text.Trim();
+                    bool ketQua = MatHangBUS.CapNhat(matHangDuocChon);
+                    if (ketQua == false)
+                        throw new Exception();
+                    LoadGrid();
+                    MessageBox.Show("Cập nhật thành công");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Cập nhật thất bại");
+                }
+            }
+        }
+
+        private void cmdThem_Click(object sender, EventArgs e)
+        {
+            frThemMatHang frThem = new frThemMatHang();
+            frThem.ShowDialog();
+            LoadGrid();
         }
     }
 }

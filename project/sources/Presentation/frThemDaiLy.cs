@@ -87,11 +87,14 @@ namespace Presentation
                 dsDaiLy = DaiLyBUS.LayToanBoDanhSachDaiLy();
                 for (int j = 0; j < dsDaiLy.Count; ++j)
                 {
-                    if (MessageBox.Show("Thêm thành công! Với mã đại lý là: " + dsDaiLy[j].MaDaiLy.ToString() + " . Bạn có muốn thêm tiếp không?", "Chúc mừng", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.No)
+                    if (String.Compare(dsDaiLy[j].TenDaiLy, txtTenDaiLy.Text) == 0)
                     {
-                        Close();
+                        if (MessageBox.Show("Thêm thành công! Với mã đại lý là: " + dsDaiLy[j].MaDaiLy.ToString() + " . Bạn có muốn thêm tiếp không?", "Chúc mừng", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.No)
+                        {
+                            Close();
+                        }
+                        return;
                     }
-                    return;
                 }
             }
             MessageBox.Show("Có lỗi trong quá trình thêm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);

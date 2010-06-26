@@ -57,11 +57,23 @@
     <Compile Include="frDemoBaiTap2.Designer.cs">
       <DependentUpon>frDemoBaiTap2.cs</DependentUpon>
     </Compile>
+    <Compile Include="frQuanLyBangGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frQuanLyBangGia.Designer.cs">
+      <DependentUpon>frQuanLyBangGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frQuanLyDaiLy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frQuanLyDaiLy.Designer.cs">
       <DependentUpon>frQuanLyDaiLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frQuanLyDonViTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frQuanLyDonViTinh.Designer.cs">
+      <DependentUpon>frQuanLyDonViTinh.cs</DependentUpon>
     </Compile>
     <Compile Include="frQuanLyLoaiDaiLy.cs">
       <SubType>Form</SubType>
@@ -81,11 +93,29 @@
     <Compile Include="frQuanLyQuan.Designer.cs">
       <DependentUpon>frQuanLyQuan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frThemBangGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frThemBangGia.Designer.cs">
+      <DependentUpon>frThemBangGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frThemDonViTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frThemDonViTinh.Designer.cs">
+      <DependentUpon>frThemDonViTinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="frThemLoaiDaiLy.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frThemLoaiDaiLy.Designer.cs">
       <DependentUpon>frThemLoaiDaiLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frThemMatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frThemMatHang.Designer.cs">
+      <DependentUpon>frThemMatHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frThemQuan.cs">
       <SubType>Form</SubType>
@@ -105,9 +135,15 @@
       <DependentUpon>frDemoBaiTap2.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frQuanLyBangGia.resx">
+      <DependentUpon>frQuanLyBangGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frQuanLyDaiLy.resx">
       <DependentUpon>frQuanLyDaiLy.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frQuanLyDonViTinh.resx">
+      <DependentUpon>frQuanLyDonViTinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frQuanLyLoaiDaiLy.resx">
       <DependentUpon>frQuanLyLoaiDaiLy.cs</DependentUpon>
@@ -120,9 +156,18 @@
       <DependentUpon>frQuanLyQuan.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frThemBangGia.resx">
+      <DependentUpon>frThemBangGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frThemDonViTinh.resx">
+      <DependentUpon>frThemDonViTinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frThemLoaiDaiLy.resx">
       <DependentUpon>frThemLoaiDaiLy.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frThemMatHang.resx">
+      <DependentUpon>frThemMatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frThemQuan.resx">
       <DependentUpon>frThemQuan.cs</DependentUpon>
