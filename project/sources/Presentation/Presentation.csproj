@@ -57,6 +57,12 @@
     <Compile Include="frDemoBaiTap2.Designer.cs">
       <DependentUpon>frDemoBaiTap2.cs</DependentUpon>
     </Compile>
+    <Compile Include="frLapPhieuThuTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frLapPhieuThuTien.designer.cs">
+      <DependentUpon>frLapPhieuThuTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="frQuanLyBangGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,11 +99,23 @@
     <Compile Include="frQuanLyQuan.Designer.cs">
       <DependentUpon>frQuanLyQuan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frSuaChiTietPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frSuaChiTietPhieuXuat.Designer.cs">
+      <DependentUpon>frSuaChiTietPhieuXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frThemBangGia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frThemBangGia.Designer.cs">
       <DependentUpon>frThemBangGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frThemChiTietPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frThemChiTietPhieuXuat.Designer.cs">
+      <DependentUpon>frThemChiTietPhieuXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="frThemDonViTinh.cs">
       <SubType>Form</SubType>
@@ -117,6 +135,12 @@
     <Compile Include="frThemMatHang.Designer.cs">
       <DependentUpon>frThemMatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frThemPhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frThemPhieuXuat.Designer.cs">
+      <DependentUpon>frThemPhieuXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frThemQuan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,11 +153,20 @@
     <Compile Include="frThemDaiLy.Designer.cs">
       <DependentUpon>frThemDaiLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="frTraCuuDaiLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frTraCuuDaiLy.designer.cs">
+      <DependentUpon>frTraCuuDaiLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frDemoBaiTap2.resx">
       <DependentUpon>frDemoBaiTap2.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frLapPhieuThuTien.resx">
+      <DependentUpon>frLapPhieuThuTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frQuanLyBangGia.resx">
       <DependentUpon>frQuanLyBangGia.cs</DependentUpon>
@@ -156,8 +189,14 @@
       <DependentUpon>frQuanLyQuan.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frSuaChiTietPhieuXuat.resx">
+      <DependentUpon>frSuaChiTietPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frThemBangGia.resx">
       <DependentUpon>frThemBangGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frThemChiTietPhieuXuat.resx">
+      <DependentUpon>frThemChiTietPhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frThemDonViTinh.resx">
       <DependentUpon>frThemDonViTinh.cs</DependentUpon>
@@ -169,6 +208,9 @@
     <EmbeddedResource Include="frThemMatHang.resx">
       <DependentUpon>frThemMatHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frThemPhieuXuat.resx">
+      <DependentUpon>frThemPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frThemQuan.resx">
       <DependentUpon>frThemQuan.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -177,10 +219,17 @@
       <DependentUpon>frThemDaiLy.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="frTraCuuDaiLy.resx">
+      <DependentUpon>frTraCuuDaiLy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPhieuThuTien.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPhieuThuTien1.cs</LastGenOutput>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -194,6 +243,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="rptPhieuThuTien1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPhieuThuTien.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

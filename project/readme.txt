@@ -1,0 +1,1 @@
+﻿các bảng ko dùng autonum: PHIEUXUAT

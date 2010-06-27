@@ -24,3 +24,8 @@ D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\project\sources\P
 D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\project\sources\Presentation\obj\Debug\Presentation.frThemBangGia.resources
 D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\project\sources\Presentation\obj\Debug\Presentation.frQuanLyDonViTinh.resources
 D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\project\sources\Presentation\obj\Debug\Presentation.frThemDonViTinh.resources
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\project\sources\Presentation\obj\Debug\Presentation.frThemPhieuXuat.resources
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\project\sources\Presentation\obj\Debug\Presentation.frThemChiTietPhieuXuat.resources
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\project\sources\Presentation\obj\Debug\Presentation.frSuaChiTietPhieuXuat.resources
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\project\sources\Presentation\obj\Debug\Presentation.frLapPhieuThuTien.resources
+D:\Giao Trinh\DH KHTN\CTT502-Introduction Software Engineering\project\sources\Presentation\obj\Debug\Presentation.frTraCuuDaiLy.resources

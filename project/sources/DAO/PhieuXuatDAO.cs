@@ -100,14 +100,19 @@ namespace DAO
             try
             {
                 ketNoi = MoKetNoi();
-                //do mã dùng auto number và delete dùng defaut 0 nên ko cần insert
-                string chuoiLenh = "INSERT INTO PHIEUXUAT(MaDaiLy, NgayLapPhieu, TongTriGia)";
-                chuoiLenh += " VALUES(@MaDaiLy, @NgayLapPhieu, @TongTriGia)";
+                // mã ko dùng auto number
+                //do delete dùng defaut 0 nên ko cần insert
+                string chuoiLenh = "INSERT INTO PHIEUXUAT(MaPhieuXuat, MaDaiLy, NgayLapPhieu, TongTriGia)";
+                chuoiLenh += " VALUES(@MaPhieuXuat, @MaDaiLy, @NgayLapPhieu, @TongTriGia)";
                 OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
 
                 // Các tham số
                 // Thứ tự các tham số trong chuoiLenh và thứ tự add các tham số phải giống nhau
                 OleDbParameter thamSo;
+
+                thamSo = new OleDbParameter("@MaPhieuXuat", OleDbType.Integer);
+                thamSo.Value = phieuXuat.MaPhieuXuat;
+                lenh.Parameters.Add(thamSo);
 
                 thamSo = new OleDbParameter("@MaDaiLy", OleDbType.Integer);
                 thamSo.Value = phieuXuat.MaDaiLy;

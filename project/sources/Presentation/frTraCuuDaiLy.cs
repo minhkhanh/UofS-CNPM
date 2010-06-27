@@ -20,9 +20,15 @@ namespace Presentation
         {
             List<DaiLyDTO> dsDaiLy = DaiLyBUS.LayDanhSachDaiLy();
             gridDaiLy.Rows.Clear();
+            LoaiDaiLyDTO loaidaily;
+            QuanDTO quan;
+            
             for (int i = 0; i < dsDaiLy.Count; ++i)
             {
-                gridDaiLy.Rows.Add(i+1,dsDaiLy[i].MaDaiLy, dsDaiLy[i].TenDaiLy, LoaiDaiLyBUS.LayTenLoaiDaiLy(dsDaiLy[i].MaLoaiDaiLy), QuanBUS.LayTenQuan(dsDaiLy[i].MaQuan), dsDaiLy[i].NoCuaDaiLy);
+                
+                string tenloaidaily = LoaiDaiLyBUS.LayTenLoaiDaiLy(dsDaiLy[i].MaLoaiDaiLy);
+                string tenquan = QuanBUS.LayTenQuan(dsDaiLy[i].MaQuan);    
+                gridDaiLy.Rows.Add(i+1,dsDaiLy[i].MaDaiLy, dsDaiLy[i].TenDaiLy, tenloaidaily, tenquan, dsDaiLy[i].NoCuaDaiLy);
                 gridDaiLy.Rows[gridDaiLy.RowCount - 1].Tag = dsDaiLy[i];
             }
         }
@@ -47,12 +53,15 @@ namespace Presentation
             string Quan = textBoxQuan.Text;
             string TienNo = textBoxTienNo.Text;
 
-            List<TraCuuDaiLyDTO> dsTraCuuDaiLy = TraCuuDaiLyBUS.LayDanhSachTraCuu(DaiLy, Loai, Quan, TienNo);
+            
+
+            List<DaiLyDTO> dsDaiLy = new List<DaiLyDTO>();
+            dsDaiLy = DaiLyBUS.TraCuuDaiLy(DaiLy, Loai, Quan, TienNo);
             gridDaiLy.Rows.Clear();
-            for (int i = 0; i < dsTraCuuDaiLy.Count; ++i)
+            for (int i = 0; i < dsDaiLy.Count; ++i)
             {
-                gridDaiLy.Rows.Add(i + 1,dsTraCuuDaiLy[i].MaDaiLy, dsTraCuuDaiLy[i].TenDaiLy, dsTraCuuDaiLy[i].TenLoaiDaiLy,dsTraCuuDaiLy[i].TenQuan, dsTraCuuDaiLy[i].TienNo);
-                gridDaiLy.Rows[gridDaiLy.RowCount - 1].Tag = dsTraCuuDaiLy[i];
+                gridDaiLy.Rows.Add(i + 1,dsDaiLy[i].MaDaiLy, dsDaiLy[i].TenDaiLy, Loai ,Quan , dsDaiLy[i].NoCuaDaiLy);
+                gridDaiLy.Rows[gridDaiLy.RowCount - 1].Tag = dsDaiLy[i];
             }
         }
 

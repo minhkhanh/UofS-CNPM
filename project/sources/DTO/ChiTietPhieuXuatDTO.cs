@@ -40,7 +40,7 @@ namespace DTO
         public long MaDonViTinh
         {
             get { return maDonViTinh; }
-            set { MaDonViTinh = value; }
+            set { maDonViTinh = value; }
         }
         /// <summary>
         /// Số lượng xuất

@@ -319,6 +319,72 @@ namespace DAO
             }
             return ketQua;
         }
+        //Tra cuu dai ly
+        public static List<DaiLyDTO> TraCuuDaiLy(string tendaily, string maloaidaily, string maquan, string notoida)
+        {
+            OleDbConnection ketNoi = null;
+            List<DaiLyDTO> dsDaiLy = new List<DaiLyDTO>();
+            try
+            {
+                ketNoi = MoKetNoi();
+                string chuoiLenh = "SELECT MaDaiLy, TenDaiLy, MaLoaiDaiLy, DienThoai, DiaChi, MaQuan, NgayTiepNhan, Email, NoCuaDaiLy, Deleted FROM DAILY DL where DL.MaDaiLy = DL.MaDaiLy";
+                if (tendaily.Length > 0)
+                    chuoiLenh = chuoiLenh + " AND TENDAILY = '" + tendaily + "'";
+                if (maloaidaily.Length > 0)
+                    chuoiLenh = chuoiLenh + " AND MALOAIDAILY = " + maloaidaily;
+                if (maquan.Length > 0)
+                    chuoiLenh = chuoiLenh + " AND MAQUAN = " + maquan;
+                if (notoida.Length > 0)
+                    chuoiLenh = chuoiLenh + " AND NOCUADAILY = " + notoida;
 
+                OleDbCommand lenh = new OleDbCommand(chuoiLenh, ketNoi);
+                OleDbDataReader boDoc = lenh.ExecuteReader();
+                while (boDoc.Read())
+                {
+                    DaiLyDTO daiLy = new DaiLyDTO();
+                    daiLy.MaDaiLy = boDoc.GetInt32(0);
+                    if (!boDoc.IsDBNull(1))
+                        daiLy.TenDaiLy = boDoc.GetString(1);
+                    if (!boDoc.IsDBNull(2))
+                        daiLy.MaLoaiDaiLy = boDoc.GetInt32(2);
+                    if (!boDoc.IsDBNull(3))
+                        daiLy.DienThoai = boDoc.GetString(3);
+                    if (!boDoc.IsDBNull(4))
+                        daiLy.DiaChi = boDoc.GetString(4);
+                    if (!boDoc.IsDBNull(5))
+                        daiLy.MaQuan = boDoc.GetInt32(5);
+                    if (!boDoc.IsDBNull(6))
+                        daiLy.NgayTiepNhan = boDoc.GetDateTime(6);
+                    if (!boDoc.IsDBNull(7))
+                        daiLy.Email = boDoc.GetString(7);
+                    if (!boDoc.IsDBNull(8))
+                        daiLy.NoCuaDaiLy = boDoc.GetInt32(8);
+                    if (!boDoc.IsDBNull(9) && boDoc.GetBoolean(9))
+                        continue;
+                    dsDaiLy.Add(daiLy);
+                }
+            }
+            catch (Exception ex)
+            {
+                dsDaiLy = new List<DaiLyDTO>();
+            }
+            finally
+            {
+                if (ketNoi != null && ketNoi.State == System.Data.ConnectionState.Open)
+                    ketNoi.Close(); // sau khi làm xong phải đóng kết nối
+            }
+            return dsDaiLy;
+
+        }
+        public static DaiLyDTO TraCuuTheoMaDaiLy(long madaily)
+        {
+            List<DaiLyDTO> dsDaiLy = LayDanhSachDaiLy();
+            for (int i = 0; i < dsDaiLy.Count; i++)
+            {
+                if (dsDaiLy[i].MaDaiLy == madaily)
+                    return dsDaiLy[i];
+            }
+            return null;
+        }
     }
 }

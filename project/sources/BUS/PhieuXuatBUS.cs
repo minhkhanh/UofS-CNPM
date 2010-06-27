@@ -16,6 +16,20 @@ namespace BUS
         {
             return PhieuXuatDAO.LayDanhSachPhieuXuat();
         }
+
+        public static long LayMaPhieuXuatKhaDung()
+        {
+            List<PhieuXuatDTO> dsPhieuXuat = PhieuXuatBUS.LayToanBoDanhSachPhieuXuat();
+            long iTemp = -1;
+            for (int i = 0; i < dsPhieuXuat.Count; ++i )
+            {
+                if (dsPhieuXuat[i].MaPhieuXuat>iTemp)
+                {
+                    iTemp = dsPhieuXuat[i].MaPhieuXuat;
+                }
+            }
+            return (iTemp + 1);
+        }
         /// <summary>
         /// Lấy ds các các phiếu xuất kể cả phiếu bị xóa
         /// </summary>

@@ -43,9 +43,11 @@
     <Compile Include="DonViTinhDAO.cs" />
     <Compile Include="LoaiDaiLyDAO.cs" />
     <Compile Include="MatHangDAO.cs" />
+    <Compile Include="PhieuThuTienDAO.cs" />
     <Compile Include="PhieuXuatDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuanDAO.cs" />
+    <Compile Include="TraCuuDaiLyDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO\DTO.csproj">

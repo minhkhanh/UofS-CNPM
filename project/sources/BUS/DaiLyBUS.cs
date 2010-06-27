@@ -77,6 +77,38 @@ namespace BUS
             //Kiểm tra các qui định
             return DaiLyDAO.XoaThatSuToanBo();
         }
+        public static List<DaiLyDTO> TraCuuDaiLy(string tendaily, string tenloaidaily, string tenquan, string nocuadaily)
+        {
+            LoaiDaiLyDTO loaidaily;
+            loaidaily = LoaiDaiLyDAO.TraCuuTheoTenLoaiDaiLy(tenloaidaily);
+            QuanDTO quan;
+            quan = QuanDAO.TraCuuTheoTenQuan(tenquan);
+            string chuoi1 = "";
+            string chuoi2 = "";
+            if (loaidaily != null)
+                chuoi1 = loaidaily.MaLoaiDaiLy.ToString();
+            if (quan != null)
+                chuoi2 = quan.MaQuan.ToString();
 
+            return DaiLyDAO.TraCuuDaiLy(tendaily, chuoi1, chuoi2, nocuadaily);
+        }
+        public static DaiLyDTO TraCuuTheoMaDaiLy(long madaily)
+        {
+            return DaiLyDAO.TraCuuTheoMaDaiLy(madaily);
+        }
+        public static int LayDaiLy(long maDaiLy)
+        {
+            int kq = 0;
+            List<DaiLyDTO> dsDaiLy = DaiLyBUS.LayDanhSachDaiLy();
+            for (int i = 0; i < dsDaiLy.Count; ++i)
+            {
+                if (dsDaiLy[i].MaDaiLy == maDaiLy)
+                {
+                    kq = i;
+                    break;
+                }
+            }
+            return kq;
+        }
     }
 }

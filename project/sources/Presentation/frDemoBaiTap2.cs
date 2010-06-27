@@ -23,8 +23,8 @@ namespace Presentation
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //frTraCuuDaiLy frm = new frTraCuuDaiLy();
-            //frm.ShowDialog();
+            frTraCuuDaiLy frm = new frTraCuuDaiLy();
+            frm.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -60,6 +60,18 @@ namespace Presentation
         private void button7_Click(object sender, EventArgs e)
         {
             frQuanLyDonViTinh frm = new frQuanLyDonViTinh();
+            frm.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            frThemPhieuXuat frm = new frThemPhieuXuat();
+            frm.ShowDialog();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            frLapPhieuThuTien frm = new frLapPhieuThuTien();
             frm.ShowDialog();
         }
     }

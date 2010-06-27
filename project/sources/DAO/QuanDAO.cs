@@ -246,5 +246,21 @@ namespace DAO
             }
             return ketQua;
         }
+        public static QuanDTO TraCuuTheoTenQuan(string tenquan)
+        {
+            List<QuanDTO> dsQuan = LayDanhSachQuan();
+            for (int i = 0; i < dsQuan.Count; i++)
+            {
+                if (dsQuan[i].TenQuan.CompareTo(tenquan) == 0)
+                    return dsQuan[i];
+            }
+            if (tenquan.Length > 0)
+            {
+                QuanDTO quan = new QuanDTO();
+                quan.MaQuan = -1;
+                return quan;
+            }
+            return null;
+        }
     }
 }
